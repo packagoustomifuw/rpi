@@ -1,13 +1,8 @@
 #!/usr/bin/python
 
-from Adafruit_I2C import Adafruit_I2C as I2C
-import time
-import os
+import imu_pi
 
-#set I2C address for accelerometer and gyroscope
-accgy = I2C(0x6b)
-#set I2C address for magnetometer
-mag = I2C(0x1e)
+imu = IMU(0x6b, 0x1e)
 
 #set angles and axes
 pitch_high = 0x19
